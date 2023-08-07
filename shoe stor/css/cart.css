@@ -1,0 +1,560 @@
+/* start globle rules */
+*{
+    box-sizing: border-box ;
+    margin: 0 ;
+    padding: 0 ;
+}
+ul{
+    list-style-type: none ;
+}
+a{
+    text-decoration: none ;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif ;
+}
+html{
+    scroll-behavior: smooth ;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  /* Small */
+@media (min-width: 768px) {
+    .container {
+    width: 750px;
+}
+}
+/* Medium */
+@media (min-width: 992px) {
+.container {
+    width: 992px;
+}
+}
+/* Large */
+@media (min-width: 1200px) {
+.container {
+    width: 1200px;
+}
+}
+/* end globle rules */
+/* start header */
+.header{
+    height: 150px ;
+    border-bottom: 1px solid #7777775b ;
+    box-shadow: 0px 1px 20px 1px #77777733 ;
+}
+.header .container{
+    height: 100% ;
+    display: flex ;
+    justify-content: space-between ;
+    align-items: center ;
+}
+.header .container .search{
+    display: flex ;
+    align-items: center ;
+}
+.header .container .search i{
+    padding-right: 10px ;
+    color: #444 ;
+    font-size: 20px ;
+}
+.header .container .search form input{
+    border: none ;
+    outline: none ;
+    padding: 10px 20px ;
+    width: 200px ;
+    font-size: 20px ;
+    text-transform: capitalize ;
+}
+.header .container .name{
+    padding: 20px 30px ;
+    font-size: 22px ;
+    font-weight: bold ;
+    color: #777 ;
+    text-transform: uppercase ;
+    word-spacing: 10px;
+}
+.header .container .icons a i{
+    font-size: 24px ;
+    color: #777 ;
+    margin-left: 15px ;
+    transition: 0.4s ;
+    -webkit-transition: 0.4s ;
+    -moz-transition: 0.4s ;
+    -ms-transition: 0.4s ;
+    -o-transition: 0.4s ;
+}
+.header .container .icons a:hover i{
+    color: black ;
+}
+.header .container .icons .shop{
+    position: relative ;
+}
+.header .container .icons .shop::before{
+    content: "2" ;
+    position: absolute ;
+    top: -24px ;
+    right: -20px ;
+    width: 30px ;
+    height: 30px ;
+    background-color: #8e38c1 ;
+    color: white ;
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+    border-radius: 50% ;
+    -webkit-border-radius: 50% ;
+    -moz-border-radius: 50% ;
+    -ms-border-radius: 50% ;
+    -o-border-radius: 50% ;
+    transition: 0.3s ;
+    -webkit-transition: 0.3s ;
+    -moz-transition: 0.3s ;
+    -ms-transition: 0.3s ;
+    -o-transition: 0.3s ;
+}
+.header .container .icons .shop:hover::before{
+    top: -30px ;
+}
+@media(max-width:992px){
+    .header .container{
+        flex-direction: column ;
+        position: relative ;
+    }
+    .header .container .search{
+        position: absolute ;
+        bottom: 20px ;
+        left: 0;
+    }
+    .header .container .icons{
+        padding-bottom: 25px ;
+        display: flex ;
+        width: 600px ;
+        justify-content: flex-end ;
+    }
+}
+@media(max-width:700px){
+    .header .container .icons{
+        width: 300px;
+    }
+    .header .container .name{
+        text-align: center ;
+    }
+}
+/* end header */
+/* start nav bar */
+.nav{
+    padding-top: 20px ;
+    padding-bottom: 20px ;
+}
+.nav .container .bars{
+    display: none ;
+}
+.nav .container ul{
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+    gap: 50px ;
+}
+@media(max-width:1200px){
+    .nav .container ul{
+        gap: 30px;
+    }
+}
+@media(max-width:992px){
+    .nav .container ul{
+        gap: 10px;
+    }
+    .nav .container ul li a{
+        font-size: 15px !important ;
+    }
+}
+@media(max-width:767px){
+    .nav .container .bars{
+        display: block ;
+        font-size: 30px ;
+        transition: 0.4s ;
+        -webkit-transition: 0.4s ;
+        -moz-transition: 0.4s ;
+        -ms-transition: 0.4s ;
+        -o-transition: 0.4s ;
+}
+    .nav .container .bars:hover{
+        color: #8e38c1 ;
+    }
+    .nav .container .bars:hover + ul{
+        display: flex ;
+        flex-direction: column ;
+        background-color: aliceblue ;
+        margin-top: 10px ;
+        border-radius: 20px ;
+        -webkit-border-radius: 20px ;
+        -moz-border-radius: 20px ;
+        -ms-border-radius: 20px ;
+        -o-border-radius: 20px ;
+}
+    .nav .container ul{
+        display: none ;
+        transition: 0.4s ;
+        -webkit-transition: 0.4s ;
+        -moz-transition: 0.4s ;
+        -ms-transition: 0.4s ;
+        -o-transition: 0.4s ;
+}
+    .nav .container ul li:not(:last-child) {
+        width: 100% ;
+        border-bottom: 1px solid #6666 ;
+        text-align: center ;
+    }
+    .nav .container ul li{
+        padding: 20px 0 !important;
+    }
+}
+.nav .container ul li{
+    padding: 10px ;
+}
+.nav .container ul li i{
+    margin-left: 5px ;
+    font-size: 20px ;
+    transition: 0.4s ;
+    -webkit-transition: 0.4s ;
+    -moz-transition: 0.4s ;
+    -ms-transition: 0.4s ;
+    -o-transition: 0.4s ;
+}
+.nav .container ul li a{
+    color: #444 ;
+    font-size: 20px ;
+    font-weight: bold ;
+    text-transform: uppercase ;
+    transition: 0.4s ;
+    -webkit-transition: 0.4s ;
+    -moz-transition: 0.4s ;
+    -ms-transition: 0.4s ;
+    -o-transition: 0.4s ;
+}
+.nav .container ul li:hover a{
+    color: #8e38c1 ;
+}
+.nav .container ul li:hover i{
+    color: #8e38c1 ;
+}
+.loc p{
+    font-size: 24px ;
+    margin-left: 100px ;
+}
+.loc p span{
+    color: #8e38c1;
+}
+.loc {
+    background-color: rgba(128, 128, 128, 0.166);
+    padding: 30px ;
+}
+/* end nav bar */
+/* start cart-content */
+.cart-content table{
+    border: 1px solid #777 ;
+    width: 90% ;
+    height: 500px ;
+    margin: 50px auto ;
+}
+.cart-content table th{
+    height: 100px ;
+    border: 1px solid ;
+    font-size: 26px ;
+    font-weight: bold ;
+    text-transform: uppercase ;
+}
+.cart-content table td{
+    border: 1px solid #777 ;
+    text-align: center ;
+    width: calc(100% /6);
+    font-size: 24px ;
+    text-transform: capitalize ;
+}
+.cart-content table td .quantity {
+    margin-top: 20px ;
+    margin-bottom: 30px ;
+    margin-left: auto ;
+    margin-right: auto ;
+    width: 200px ;
+    height: 50px ;
+    border: 1px solid ;
+    padding: 20px 0 ;
+    display: flex ;
+    align-items: center ;
+    position: relative ;
+}
+.cart-content table td .quantity div{
+    font-size: 24px ;
+    font-weight: bold ;
+    width: 100% ;
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+}
+.cart-content table td .quantity .neg,
+.cart-content table td .quantity .pos{
+    position: absolute ;
+    width: 60px;
+    height: 48px ;
+    border: 1px solid rgba(128, 0, 128, 0.53);
+    box-shadow:1px 1px 5px 1px  rgba(128, 0, 128, 0.53);
+    font-size: 30px ;
+    top: 0 ;
+    font-weight: bold ;
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+    transition: 0.4s ;
+    -webkit-transition: 0.4s ;
+    -moz-transition: 0.4s ;
+    -ms-transition: 0.4s ;
+    -o-transition: 0.4s ;
+}
+.cart-content table td .quantity .neg:hover,
+.cart-content table td .quantity .pos:hover{
+    box-shadow:4px 4px 10px 1px #777777a9 ;
+    cursor: pointer;
+    background-color: #8e38c1 ;
+    color: white ;
+}
+.cart-content table td .quantity .pos{
+    right: 0 ;
+}
+.cart-content table .price{
+    font-size: 22px ;
+    color: #777 ;
+    font-weight: bold ;
+}
+.cart-content table .remove span{
+    width: 40px ;
+    height: 40px ;
+    margin: 0 auto ;
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+    border-radius: 10px ;
+    background-color: #8e38c1 ;
+    -webkit-border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -ms-border-radius: 10px ;
+    -o-border-radius: 10px ;
+}
+.cart-content table tbody img{
+    width: 100% ;
+}
+.cart-content .done{
+    display: flex ;
+    justify-content: space-between ;
+    align-items: center ;
+    padding: 20px 100px ;
+    padding-bottom: 100px ;
+    border-bottom: 1px solid #7777775b ;
+}
+button{
+    color: white ;
+    background-color: rgb(113, 28, 177) ;
+    padding: 15px 40px ;
+    word-spacing: 10px ;
+    letter-spacing: 3px;
+    font-size: 20px;
+    text-transform: uppercase ;
+    margin-top: 15px ;
+    border: none ;
+    border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -ms-border-radius: 10px ;
+    -o-border-radius: 10px ;
+    transition: 0.4s ;
+    -webkit-transition: 0.4s ;
+    -moz-transition: 0.4s ;
+    -ms-transition: 0.4s ;
+    -o-transition: 0.4s ;
+}
+button:hover{
+    background-color: rgb(54, 3, 158);
+    color: rgba(225, 222, 222, 0.922)  ;
+    box-shadow:4px 4px 10px 1px #777 ;
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+}
+.cart-content .done .coupon .buttons{
+    margin-bottom: 80px ;
+    display: flex ;
+    gap: 50px ;
+}
+.cart-content .done .coupon .buttons .spicial{
+    color: #8e38c1 ;
+    border: 1px solid #8e38c1 ;
+    background-color: white ;
+}
+.cart-content .done .coupon .buttons .spicial:hover{
+    background-color:rgb(54, 3, 158) ;
+    color: white ;
+}
+.cart-content .done .coupon .coup h2{
+    font-size: 40px ;
+    text-transform: capitalize ;
+    padding-bottom: 20px ;
+    font-weight: normal ;
+}
+.cart-content .done .coupon .coup p{
+    color: #777 ;
+    padding-bottom: 20px ;
+    font-size: 24px ;
+    text-transform: capitalize  ;
+}
+.cart-content .done .coupon form{
+    display: inline-block ;
+    margin-right: 20px ;
+}
+.cart-content .done .coupon form input{
+    padding: 15px 40px 15px 15px  ;
+    word-spacing: 5px ;
+    letter-spacing: 2px;
+    font-size: 25px;
+    color: #7779 ;
+}
+.cart-content .done .total h1{
+    text-transform: uppercase ;
+    font-size: 35px ;
+    font-weight: normal ;
+    text-align: end ;
+    padding-bottom: 30px ;
+    border-bottom: 1px solid #77777734 ;
+}
+.cart-content .done .total .sub{
+    display: flex ;
+    justify-content: space-between ;
+    padding: 20px 10px ;
+    font-size: 18px ;
+    text-transform: capitalize ;
+    font-weight: bold ;
+}
+.cart-content .done .total a{
+    margin-top: 30px ;
+    display: block ;
+}
+/* end cart-content */
+/* start footer */
+.footer{
+    display: flex ;
+    justify-content: space-between ;
+    align-items: center ;
+    padding: 100px 50px ;
+}
+.footer h2{
+    margin-bottom: 30px ;
+    text-transform: capitalize ;
+    font-size: 30px ;
+}
+.footer ul li a{
+    color: #777 ;
+    font-size: 24px ;
+    display: block ;
+    padding: 5px 0;
+}
+.footer .promo img{
+    width: 300px ;
+}
+.footer .promo p{
+    font-size: 22px ;
+    margin: 20px 0 ;
+    color: #8e38c1 ;
+    text-transform: capitalize ;
+}
+.footer .promo span{
+    font-size: 22px ;
+    color: #777;
+}
+.footer .contact .location,
+.footer .contact .phone{
+    display: flex ;
+    gap: 20px ;
+    margin-bottom: 20px ;
+    font-size: 20px ;
+}
+.footer .contact i{
+    color: #8e38c1;
+    font-size: 24px ;
+}
+.footer .contact .mail i{
+    margin-right: 20px ;
+    margin-bottom: 20px ;
+}
+.footer .subscrib{
+    margin-top: 50px ;
+}
+.footer .subscrib h3{
+    font-size: 28px ;
+    margin-bottom: 30px  ;
+}
+.footer .subscrib fieldset{
+    padding: 10px 10px ;
+    border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -ms-border-radius: 10px ;
+    -o-border-radius: 10px ;
+}
+.footer .subscrib fieldset input{
+    border: none ;
+    outline: none ;
+    padding: 10px ;
+}
+.footer .subscrib fieldset ::placeholder{
+    font-size: 20px ;
+}
+.footer .subscrib fieldset .submit{
+    color: white ;
+    background-color: rgb(113, 28, 177) ;
+    padding: 10px 20px ;
+    letter-spacing: 3px;
+    font-size: 20px;
+    text-transform: uppercase ;
+    border: none ;
+    border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -ms-border-radius: 10px ;
+    -o-border-radius: 10px ;
+    transition: 0.4s ;
+    -webkit-transition: 0.4s ;
+    -moz-transition: 0.4s ;
+    -ms-transition: 0.4s ;
+    -o-transition: 0.4s ;
+}
+.footer .subscrib fieldset .submit:hover{    
+    background-color: rgb(54, 3, 158);
+    color: rgba(225, 222, 222, 0.922)  ;
+    box-shadow:4px 4px 10px 1px #777 ;
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+}
+.footer-2 {
+    padding: 50px 0;
+    text-align: center ;
+}
+.footer-2 p{
+    font-size: 20px ;
+    color: #777 ;
+    text-transform: capitalize;
+}
+.footer-2 p span{
+    color: #8e38c1;
+    text-transform: capitalize ;
+    font-weight: bold ;
+}
+/* end footer */
